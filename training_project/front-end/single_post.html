@@ -1,0 +1,40 @@
+<head>
+<link rel="stylesheet" type="text/css" href="single_post.css">
+</head>
+<div class="singlePost">
+<div class="title"><h3>{{post.title}}</h3></div>
+<div class="category">{{post.catType}}</div>
+<div class="nameAndImage">{{post.postedBy[0].firstName}} {{post.postedBy[0].lastName}}</div>
+<div class="dateAndTime">{{post.createdOn}}</div>
+<div class="postImage"><img src="{{post.postImage}}" alt="postImage" /</div>
+<ul>
+	<li class="single_post_buttons"><button ng-click="">Share</button></li>
+	<li class="single_post_buttons"><button ng-click="">{{post.flagCount}} Flags</button></li>
+	<li class="single_post_buttons"><button ng-click="">{{post.likeCount}} Likes</button></li>
+	<li class="single_post_buttons"><button ng-click="">{{post.comments.length}} Comments</button></li>
+	<li class="single_post_buttons"><button ng-click="delete(post._id)">Delete Post</button></li>
+</ul>
+<div class="comments">
+	<div class="allComments">
+		<div class="commentBox" ng-repeat="x in comments">
+			<div class="userImage"></div>
+			<div class="userName">{{x.creator.firstName}} {{x.creator.lastName}}</div>
+			<div class="comment"><h6>{{x.comment}}</h6></div>
+			<div class="reply">
+				<div class="commentArea"></div>
+				<div class="submitComment"></div>
+			</div>
+		</div>
+	</div>		
+	<div class="newComment">
+		<div class="commentArea"><input type="text" placeholder="Enter your Comment" ng-model='commentText'></input></div>
+		<div class="submitComment"><input type="submit" value="Submit Comment" ng-click="submitComment()"></input></div>
+	</div>
+</div>
+<div class="viewMore" ng-click="viewMore()">View More</div>
+</div>
+
+
+
+
+

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="content">
+    <div class="content_rgt">
+    <div class="register_sec">
+    <h1>Edit your Account</h1>
+    <ul>
+    <li><span>Email: {{user.email}}</span></li>
+    <li><span>Username:</span><input type="text" ng-model="user.userName"></input></li>
+    <li><span>Password:</span><input type="text" ng-model="user.password"></input></li>
+    <li><span>First Name:</span><input type="text" ng-model="user.firstName"></input></li>
+    <li><span>Last Name:</span><input type="text" ng-model="user.lastName"></input></li>
+    <li><span>Sex:</span><input type="radio" name="gender" value="Male" ng-model="user.sex"> Male &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="Female" ng-model="user.sex"> Female&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="Other" ng-model="user.sex"> Other</li>
+    <li><span>Description:</span><input type="text" ng-model="user.description"></input></li>
+    <li><input type="submit" value="Save" ng-click="save(user)"></li>
+    <li><span>{{show}}</span></li>
+    </ul>
+    </div>
+    </div>
+    <div class="content_lft">
+    <h1>Welcome from PPL!</h1>
+    <p class="discrptn">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+    <img src="images/img_9.png"  alt=""/> </div>
+  </div>
+</div>
+<div class="clear"></div>
+</div>
